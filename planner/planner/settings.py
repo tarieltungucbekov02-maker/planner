@@ -21,7 +21,7 @@ INSTALLED_APPS = [
     'tasks',
 ]
 
-
+#khkgjhghjghj
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
