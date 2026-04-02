@@ -58,7 +58,7 @@ import os
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'planner',
+        'NAME': 'planner_db',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
         'HOST': 'db',   # ❗ ВАЖНО
@@ -69,7 +69,7 @@ DATABASES = {
 AUTH_PASSWORD_VALIDATORS = []
 
 LANGUAGE_CODE = "ru-ru"
-TIME_ZONE = "UTC"
+TIME_ZONE = "Asia/Bishkek"
 USE_I18N = True
 USE_TZ = True
 
