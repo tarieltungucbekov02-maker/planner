@@ -4,11 +4,10 @@ from django.shortcuts import redirect
 
 from django.contrib.auth import views as auth_views
 
-
-# Swagger
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
+
 from tasks import views as task_views
 
 schema_view = get_schema_view(
@@ -29,9 +28,10 @@ urlpatterns = [
     path('tasks/', include('tasks.urls')),
 
     path('login/', auth_views.LoginView.as_view(), name='login'),
-    path('logout/', auth_views.LogoutView.as_view(next_page='login'), name='logout'),
+    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
 
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0)),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0)),
+
     path('register/', task_views.register, name='register'),
 ]
