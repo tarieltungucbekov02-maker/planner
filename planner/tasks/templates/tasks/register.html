@@ -1,23 +1,23 @@
 {% extends 'tasks/base.html' %}
 
-{% block title %}Вход{% endblock %}
+{% block title %}Регистрация{% endblock %}
 
 {% block content %}
 
 <div class="card p-4 mx-auto" style="max-width: 400px;">
-    <h3 class="mb-3">Вход</h3>
+    <h3 class="mb-3">Регистрация</h3>
 
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
 
-        <button type="submit" class="btn btn-success w-100">
-            Войти
+        <button type="submit" class="btn btn-primary w-100">
+            Зарегистрироваться
         </button>
     </form>
 
     <div class="mt-3 text-center">
-        <a href="/register/">Нет аккаунта? Регистрация</a>
+        <a href="/login/">Уже есть аккаунт?</a>
     </div>
 </div>
 
