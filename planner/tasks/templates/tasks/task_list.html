@@ -19,10 +19,12 @@
 
             <div>
                 <strong>
-                    {% if task.completed %}✔{% else %}⏳{% endif %}
+                    {% if task.completed %}✔{% else %}✍️{% endif %}
                 </strong>
 
                 {{ task.title }}
+
+                <p>{{ task.description }}</p>
 
                 <br>
 
@@ -33,7 +35,7 @@
 
             <div>
                 <a href="{% url 'tasks:toggle' task.id %}" class="btn btn-sm btn-warning">✔</a>
-                <a href="{% url 'tasks:delete' task.id %}" class="btn btn-sm btn-danger">✖</a>
+                <a href="{% url 'tasks:delete' task.id %}" class="btn btn-sm btn-danger">🗑️</a>
             </div>
 
         </li>
